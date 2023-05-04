@@ -52,15 +52,16 @@ function generateID(){
 }
 
 //Add transactions to DOM list
-
 function addTransactionDOM(transaction){
+    if (!list){
+      return;
+    }
     //get sign
     const sign = transaction.amount < 0 ? '-' : '+';
 
     const item = document.createElement('li');
 
     //Add class based on value 
-
     item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
     item.innerHTML = `
@@ -71,7 +72,6 @@ function addTransactionDOM(transaction){
 }
 
 //update balance income and expense
-
 function updateValues(){
     const amounts = transactions.map(transaction => transaction.amount);
 
@@ -122,14 +122,16 @@ function updateLocalStorage(){
 
 //init app 
 function init(){
+  if (list) {
     list.innerHTML='';
+  }
 
-    transactions.forEach(addTransactionDOM);
-    updateValues();    
-    
-    
+  transactions.forEach(addTransactionDOM);
+  updateValues();
 }
 
 init();
 
-form.addEventListener('submit', addTransaction);
+if (form) {
+  form.addEventListener('submit', addTransaction);
+}
