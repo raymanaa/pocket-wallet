@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Pocket Tracker</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Pocket Tracker</h2>
     <!-- A navbar that has two pages: Wallet, Transactions -->
     <div class="navbar">
-        <a class="active" href="index.html">Wallet</a>
-        <a href="transactions.html">Transactions</a>
+      <a class="active" href="index.html">Wallet</a>
+      <a href="transactions.html">Transactions</a>
+      <a class="rapport" href="rapport.pdf" target="_blank">Rapport <img style="margin-left: 10px" height="10" width="10" src="link.png" /></a>
     </div>
 
     <div class="container">
-        <h4>Your Balance</h4>
-        <h1 id="balance">0.00 DT</h1>
+      <h4>Your Balance</h4>
+      <h1 id="balance">0.00 DT</h1>
 
-        <div class="inc-exp-container">
-            <div>
-                <h4>Income</h4>
-                <p id="money-plus" class="money plus">+0.00DT</p>
-            </div>
-            <div>
-                <h4>Expense</h4>
-                <p id="money-minus" class="money minus">-0.00DT</p>
-            </div>
+      <div class="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="money plus">+0.00DT</p>
         </div>
+        <div>
+          <h4>Expense</h4>
+          <p id="money-minus" class="money minus">-0.00DT</p>
+        </div>
+      </div>
 
-        <h3>Add new transaction</h3>
-        <form id="form">
-            <div class="form-control">
-                <label for="text">Text</label>
-                <input type="text" id="text" placeholder="Enter text...">
-            </div>
-            <div class="form-control">
-                <label for="amount">Amount <br> (negative - expense, positive - income)</label>
-                <input type="number" id="amount" placeholder="Enter amount...">
-            </div>
-            <button class="btn">Add transaction</button>
-        </form>
+      <h3>Add new transaction</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Text</label>
+          <input type="text" id="text" placeholder="Enter text..." />
+        </div>
+        <div class="form-control">
+          <label for="amount"
+            >Amount <br />
+            (negative - expense, positive - income)</label
+          >
+          <input type="number" id="amount" placeholder="Enter amount..." />
+        </div>
+        <button class="btn">Add transaction</button>
+      </form>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
