@@ -19,6 +19,7 @@
   --grey-9-a1: rgba(0, 0, 0, 0.1);
   --grey-9-a5: rgba(0, 0, 0, 0.5);
   --grey-2-a0: rgba(247, 247, 247, 0);
+  --color-cyan-extra-light: #c8f4ff;
   --color-pink-light: #4dc1de;
   --color-cyan-light: #03aed8;
   --color-red: #4dc1de;
@@ -133,8 +134,8 @@ h4 {
 .navbar > a.rapport {
   background-image: linear-gradient(
     to right,
-    var(--color-purple) 0,
-    var(--color-yellow) 100%
+    var(--color-pink-light) 0%,
+    var(--color-pink) 100%
   );
   color: var(--grey-3);
   margin-left: 80px;
