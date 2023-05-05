@@ -162,12 +162,7 @@ input[type='text'], input[type='number']{
 }
 
 .btn{
-  /* padding: 0.3rem 1rem;
-    border-radius: 1rem 0;
-    color: var(--grey-0);
-    background-image: linear-gradient(to right, var(--color-pink) 0, var(--color-orange) 100%); */
     cursor: pointer;
-    /* background-color: rgb(62, 195, 213); */ 
     background-image: linear-gradient(to right, var(--color-pink) 0, var(--color-orange) 100%);    ;
     box-shadow: var(--box-shadow);
     color: white;
@@ -230,8 +225,6 @@ input[type='text'], input[type='number']{
 .negative{
     color: rgb(255, 84, 96);
 }
-
-
 
 #screen {
   top: 145px;

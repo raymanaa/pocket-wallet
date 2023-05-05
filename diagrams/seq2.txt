@@ -1,0 +1,17 @@
+@startuml
+!theme blueprint
+actor Utilisateur
+participant "Application de suivi des dépenses" as App
+Utilisateur -> App: Ouvre l'application
+activate App
+Utilisateur -> App: Sélectionne "Suivre les dépenses"
+activate App
+App -> App: Affiche l'historique des transactions
+App -> Utilisateur: Affiche l'historique des transactions
+deactivate App
+Utilisateur -> App: Filtre les transactions par catégorie ou par période de temps
+activate App
+App -> App: Affiche les transactions filtrées
+App -> Utilisateur: Affiche les transactions filtrées
+deactivate App
+@enduml

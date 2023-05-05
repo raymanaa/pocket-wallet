@@ -1,0 +1,17 @@
+@startuml
+!theme blueprint
+actor Utilisateur
+participant "Application de suivi des dépenses" as App
+Utilisateur -> App: Ouvre l'application
+activate App
+Utilisateur -> App: Sélectionne "Saisir une transaction"
+activate App
+App -> App: Affiche l'écran de saisie de transaction
+App -> Utilisateur: Attend la saisie de la transaction
+Utilisateur -> App: Saisit les détails de la transaction
+deactivate Utilisateur
+App -> App: Enregistre la transaction
+App -> App: Met à jour le solde
+App -> App: Affiche la transaction dans l'historique
+deactivate App
+@enduml
